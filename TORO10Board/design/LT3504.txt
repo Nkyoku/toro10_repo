@@ -1,0 +1,73 @@
+﻿・設計条件
+	Vin		= 24 V
+
+	Vout1	= 3.3 V
+	Vout2	= 3 V
+	Vout3	= 5.5 V
+	Vout4	= 12 V
+
+	Iout1	= 500 mA
+	Iout2	= 500 mA
+	Iout3	= 500 mA
+	Iout4	= 200 mA
+	
+・発振周波数調整
+	fsw		= 1.5 MHz (Rrt = 10 kΩ)
+	
+・オンチップレギュレータ
+	Isky	= (Vo1 * Io1 + ... + Vo4 * Io4) / (50 * Vin)
+			= 7.05e-3 < 10 mA
+	DC5		= 5 / (Vin + 5) = 0.172
+	L		= (Vin * DC5) / (2 * fsw * (0.3 * (1 - 0.25 * DC5) - Isky)
+			= 4.91e-6 -> 4.7 uH
+	
+・インダクタ
+	Vd		= 0.4 V
+	L1		= 2 * (Vout + Vd) / fsw
+			= 4.53e-6 -> 4.7 uH
+	L2		= 4.93e-6 -> 4.7 uH
+	L3		= 7.87e-6 -> 4.7 uH
+	L4		= 16.5e-6 -> 4.7 uH (ダンピング回路 1 kΩ+1 nF)
+	
+・フィードバック抵抗
+	Vref    = 0.8 V
+	Rt1:Rb1 = Vout / 0.8 - 1 : 1
+	        = 11 : 4 -> 130 kΩ : 47 kΩ
+	Rt2:Rb2 = 25 : 8 -> 47 kΩ : 15 kΩ
+	Rt3:Rb3 = 47 : 8 -> 130 kΩ : 22 kΩ
+	Rt4:Rb4 = 14 : 1 -> 47 kΩ : 3.3 kΩ
+	
+・UVLO
+	Vrise   = 19.8 V
+	Vfall   = 18.0 V
+	Vhyst   = Vrise - Vfall > 0.11 / 1.33 * Vfall
+	        = 1.8 V
+	
+	Rt		= (Vhyst - 0.11 / 1.33 * Vfall) / 1.3e-6
+			= 239e3 -> 270 kΩ
+	Rb		= Rt * 1.33 / (Vfall - 1.33)
+			= 21.5e3 -> 22 kΩ
+	
+	逆算する
+	Vfall   = 1.33 * (Rt / Rb + 1)
+	        = 17.7 V
+	Vhyst	= Rt * 1.3e-6 + 0.11 / 1.33 * Vfall
+	        = 1.81 V
+	Vrise	= 19.5 V
+	
+・入出力コンデンサ
+	Cin		= 1 uF
+	Cout1,2	= 33 / (Vout * fsw)
+			= 7.33e-6 < 10 uF
+	Cout2	= 6.67e-6 < 10 uF
+	Cout3	= 4.00e-6 < 4.7uF
+	Cout4	= 1.83e-6 < 4.7uF
+	
+・BOM
+	インダクタ MAMK2520T4R7M, 
+	ダイオード SS2040FL
+	
+	
+	
+	
+	

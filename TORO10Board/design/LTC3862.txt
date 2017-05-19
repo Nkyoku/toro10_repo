@@ -1,0 +1,61 @@
+・要件
+	Vin(max) = 25.2 V
+	Vin(typ) = 24   V
+	Vin(min) = 19.8 V
+	Vo = 48 V
+	Vf = 0.5 V
+	Io(max) = 8 A
+	
+	χ = 0.3
+	相数 n = 2
+	
+・最大デューティーサイクル
+	Dmax = (Vo + Vf - Vin(min)) / (Vo + Vf)
+	     = 0.592 -> 84% (float)
+	
+・最小オン時間
+	ton(min) = (Vo + Vf - Vin(max)) / (Vo + Vf) / f
+	         = 1.31 us
+	
+・入力電流
+	Iin(max) = Io(max) / (1 - Dmax)
+	         = 19.6 A
+	Iin(pk) = (1 + χ/2) * Iin(max) / n
+	        = 11.3 A
+	
+・周波数とインダクタンス
+	ΔIL = χ/n * Iin(max)
+	     = 2.94 A
+	f = 450 kHz (33 kΩ)
+	L = Vin(min) / (ΔIL * f) * Dmax
+	  = 8.86 uH -> 8.2 uH
+	Io(cl) = 1.3 * Io(max)
+	IL(sat) >= (1 + χ/2) * Io(cl) / (1 - Dmax) / n
+	         = 14.7 A
+	
+・電流制限
+	Vsense(max) = 0.075 V
+	Ir(sense) = (1 + χ/2) * Io(cl) / (1 - Dmax) / n
+	          = 14.7 A
+	Rsense = Vsense(max) / Ir(sense)
+	       = 0.0051 -> 5 mΩ (1 W)
+	
+・出力コンデンサ
+	Ripple = 0.01
+	Cout >= Io(max) / (Ripple * n * Vout * f)
+	      = 18.5 uF
+
+・フィードバック抵抗
+	
+	
+	
+
+・BOM
+	インダクタ   : IHLP6767GZER8R2M11
+	MOSFET       : TPN7R506NH, NTTFS5C670NL
+	ダイオード   : FSV2060L
+	電流検知抵抗 : CSRF0612FT5L00
+	
+
+
+

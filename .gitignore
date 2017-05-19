@@ -1,0 +1,6 @@
+# Temporary Files
+*.log
+
+# LTSpice
+*.raw
+*.net
