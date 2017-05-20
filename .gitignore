@@ -4,3 +4,8 @@
 # LTSpice
 *.raw
 *.net
+
+# Eagle Backup Files
+*.s#*
+*.b#*
+*.l#*
