@@ -114,7 +114,7 @@
 <wire x1="-6" y1="2.2" x2="-6" y2="-2.2" width="0.127" layer="51"/>
 <wire x1="6" y1="2.2" x2="6" y2="-2.2" width="0.127" layer="51"/>
 </package>
-<package name="PAD">
+<package name="TESTPAD-SMT">
 <smd name="1" x="0" y="0" dx="0.8" dy="0.8" layer="1" roundness="100" cream="no"/>
 <text x="0.7" y="-0.4" size="0.8" layer="25" font="vector" ratio="18">&gt;NAME</text>
 </package>
@@ -237,6 +237,10 @@
 <wire x1="-2.2" y1="3.75" x2="2.2" y2="3.75" width="0.127" layer="21"/>
 <wire x1="3.75" y1="2.2" x2="3.75" y2="-2.2" width="0.127" layer="21"/>
 </package>
+<package name="TESTPAD-TH">
+<text x="0.7" y="-0.4" size="0.8" layer="25" font="vector" ratio="18">&gt;NAME</text>
+<pad name="1" x="0" y="0" drill="0.6"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SWITCH3P-2S">
@@ -350,12 +354,20 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="PAD" prefix="TP" uservalue="yes">
+<deviceset name="TESTPAD" prefix="TP" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="PAD" x="2.54" y="0"/>
 </gates>
 <devices>
-<device name="" package="PAD">
+<device name="-SMT" package="TESTPAD-SMT">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-TH" package="TESTPAD-TH">
 <connects>
 <connect gate="G$1" pin="P$1" pad="1"/>
 </connects>

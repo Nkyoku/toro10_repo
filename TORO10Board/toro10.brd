@@ -406,27 +406,27 @@
 <wire x1="-3.175" y1="-2.54" x2="-1.905" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="-1.27" y1="-1.905" x2="-1.905" y2="-2.54" width="0.127" layer="21"/>
 </package>
-<package name="PIN2X5-TH1.27">
-<pad name="1" x="-2.54" y="-0.635" drill="0.7" diameter="1.07" shape="octagon" first="yes"/>
-<pad name="2" x="-2.54" y="0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="3" x="-1.27" y="-0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="4" x="-1.27" y="0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="5" x="0" y="-0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="6" x="0" y="0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="7" x="1.27" y="-0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="8" x="1.27" y="0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="9" x="2.54" y="-0.635" drill="0.7" diameter="1.07" shape="octagon"/>
-<pad name="10" x="2.54" y="0.635" drill="0.7" diameter="1.07" shape="octagon"/>
+<package name="PIN2X5-1.27">
+<pad name="1" x="-2.54" y="-0.635" drill="0.7" diameter="1.1" shape="octagon" first="yes"/>
+<pad name="2" x="-2.54" y="0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="3" x="-1.27" y="-0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="4" x="-1.27" y="0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="5" x="0" y="-0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="6" x="0" y="0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="7" x="1.27" y="-0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="8" x="1.27" y="0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="9" x="2.54" y="-0.635" drill="0.7" diameter="1.1" shape="octagon"/>
+<pad name="10" x="2.54" y="0.635" drill="0.7" diameter="1.1" shape="octagon"/>
 <text x="-3" y="2" size="1" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <text x="-3" y="-3" size="1" layer="27" font="vector" ratio="15">&gt;VALUE</text>
 <wire x1="-3.175" y1="1.715" x2="3.175" y2="1.715" width="0.127" layer="21"/>
-<wire x1="3.175" y1="1.715" x2="3.175" y2="1" width="0.127" layer="21"/>
-<wire x1="3.175" y1="-1" x2="3.175" y2="-1.715" width="0.127" layer="21"/>
+<wire x1="3.175" y1="1.715" x2="3.175" y2="1.1" width="0.127" layer="21"/>
+<wire x1="3.175" y1="-1.1" x2="3.175" y2="-1.715" width="0.127" layer="21"/>
 <wire x1="3.175" y1="-1.715" x2="-3.175" y2="-1.715" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="-1.715" x2="-3.175" y2="-1" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="1" x2="-3.175" y2="1.715" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="-1" x2="-3.175" y2="1" width="0.127" layer="51"/>
-<wire x1="3.175" y1="1" x2="3.175" y2="-1" width="0.127" layer="51"/>
+<wire x1="-3.175" y1="-1.715" x2="-3.175" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="1.1" x2="-3.175" y2="1.715" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="-1.4" x2="-3.175" y2="1.1" width="0.127" layer="51"/>
+<wire x1="3.175" y1="1.1" x2="3.175" y2="-1.1" width="0.127" layer="51"/>
 </package>
 </packages>
 </library>
@@ -2976,7 +2976,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="2.1" y="65.5" size="0.8" layer="26" font="vector" ratio="18" rot="MR90" align="bottom-right"/>
 <attribute name="VALUE" x="0.9" y="65.7" size="0.8" layer="28" font="vector" ratio="18" rot="MR90"/>
 </element>
-<element name="CN5" library="kiks-connector" package="PIN1X2" value="PIN1X2" x="81.5" y="89.19" smashed="yes" rot="R270">
+<element name="CN5" library="kiks-connector" package="PIN1X2" value="" x="81.5" y="89.19" smashed="yes" rot="R270">
 <attribute name="NAME" x="83.01" y="87" size="1" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="79" y="91.69" size="1" layer="27" font="vector" ratio="15" rot="R270"/>
 </element>
@@ -2984,7 +2984,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="4" y="91" size="1" layer="26" font="vector" ratio="15" rot="MR90"/>
 <attribute name="VALUE" x="-0.1" y="95" size="1" layer="28" font="vector" ratio="15" rot="MR180"/>
 </element>
-<element name="CN4" library="kiks-connector" package="PIN1X2" value="PIN1X2" x="81.5" y="96.81" smashed="yes" rot="R270">
+<element name="CN4" library="kiks-connector" package="PIN1X2" value="" x="81.5" y="96.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="81.59" y="93" size="1" layer="25" font="vector" ratio="15" align="bottom-center"/>
 <attribute name="VALUE" x="79" y="99.31" size="1" layer="27" font="vector" ratio="15" rot="R270"/>
 </element>
@@ -3077,7 +3077,7 @@ design rules under a new name.</description>
 <element name="TP4" library="kiks-mechanical" package="TESTPAD-TH" value="" x="82.9" y="70"/>
 <element name="TP2" library="kiks-mechanical" package="TESTPAD-TH" value="" x="65.5" y="74.9"/>
 <element name="TP15" library="kiks-mechanical" package="TESTPAD-TH" value="" x="33" y="24.3" smashed="yes">
-<attribute name="NAME" x="33.6" y="25" size="0.8" layer="25" font="vector" ratio="18" rot="R90"/>
+<attribute name="NAME" x="32" y="25" size="0.8" layer="25" font="vector" ratio="18"/>
 </element>
 <element name="TP16" library="kiks-mechanical" package="TESTPAD-TH" value="" x="33" y="20.7"/>
 <element name="TP17" library="kiks-mechanical" package="TESTPAD-TH" value="" x="67" y="24.3" smashed="yes" rot="R180">
@@ -3087,7 +3087,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="66.3" y="23.3" size="0.8" layer="25" font="vector" ratio="18" rot="R180"/>
 </element>
 <element name="TP10" library="kiks-mechanical" package="TESTPAD-TH" value="" x="33" y="23.1" smashed="yes">
-<attribute name="NAME" x="34.8" y="22.6" size="0.8" layer="25" font="vector" ratio="18" rot="R90"/>
+<attribute name="NAME" x="33.5" y="22.7" size="0.8" layer="25" font="vector" ratio="18"/>
 </element>
 <element name="TP11" library="kiks-mechanical" package="TESTPAD-TH" value="" x="33" y="21.9"/>
 <element name="TP12" library="kiks-mechanical" package="TESTPAD-TH" value="" x="67" y="21.9" rot="R180"/>
@@ -3118,7 +3118,7 @@ design rules under a new name.</description>
 <element name="TP8" library="kiks-mechanical" package="TESTPAD-SMT" value="" x="1" y="68" rot="MR90"/>
 <element name="TP9" library="kiks-mechanical" package="TESTPAD-SMT" value="" x="1" y="73" rot="MR90"/>
 <element name="R33" library="kiks-passive" package="1608" value="2.2k" x="65" y="10.75" rot="R270"/>
-<element name="CN10" library="kiks-connector" package="PIN2X5-TH1.27" value="ALTERA-JTAG-TH1.27" x="13.5" y="8"/>
+<element name="CN10" library="kiks-connector" package="PIN2X5-1.27" value="ALTERA-JTAG-TH1.27" x="13.5" y="8"/>
 </elements>
 <signals>
 <signal name="GND">
